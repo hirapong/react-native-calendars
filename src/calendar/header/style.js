@@ -58,6 +58,24 @@ export default function (theme = {}) {
     disabledDayHeader: {
       color: appStyle.textSectionTitleDisabledColor
     },
+    sundayDayHeader: {
+      //marginTop: 7,
+      //marginBottom: window.height*0.02,
+      //width: window.width*0.1,
+      textAlign: 'center',
+      fontSize: appStyle.textDayHeaderFontSize,
+      fontFamily: appStyle.textDayHeaderFontFamily,
+      color: appStyle.sundaytextSectionTitleColor
+    },
+    saturdayDayHeader: {
+      //marginTop: 7,
+      //marginBottom: window.height*0.02,
+      //width: window.width*0.1,
+      textAlign: 'center',
+      fontSize: appStyle.textDayHeaderFontSize,
+      fontFamily: appStyle.textDayHeaderFontFamily,
+      color: appStyle.saturdaytextSectionTitleColor
+    },
     ...(theme[STYLESHEET_ID] || {})
   });
 }
