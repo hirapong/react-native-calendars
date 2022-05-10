@@ -53,3 +53,5 @@ export const agendaTodayColor = textLinkColor;
 export const agendaKnobColor = '#f2F4f5';
 export const todayButtonTextColor = textLinkColor;
 export const todayButtonPosition = undefined; // right' / 'left'(default)
+export const saturdaytextSectionTitleColor = '#297EAA';
+export const sundaytextSectionTitleColor = '#D7242D';

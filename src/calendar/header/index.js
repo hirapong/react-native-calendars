@@ -112,6 +112,12 @@ class CalendarHeader extends Component {
       if (_.includes(disabledDaysIndexes, idx)) {
         dayStyle.push(this.style.disabledDayHeader);
       }
+      if (idx === 0) {
+        dayStyle.push(this.style.sundayDayHeader);
+      }
+      if (idx === 6) {
+        dayStyle.push(this.style.saturdayDayHeader);
+      }
 
       return (
         <Text allowFontScaling={false} key={idx} style={dayStyle} numberOfLines={1} accessibilityLabel={''}>
