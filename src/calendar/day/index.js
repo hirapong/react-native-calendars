@@ -79,14 +79,16 @@ export default class Day extends Component {
   }
 
   render() {
-    const {day} = this.props;
+    const {day, month} = this.props;
     const date = xdateToData(day);
     const Component = this.getDayComponent();
-    const dayProps = extractComponentProps(Component, this.props);
+    //const dayProps = extractComponentProps(Component, this.props);
+    const dayProps = extractComponentProps(Day, this.props);
 
     return (
       <Component
           {...dayProps}
+          month={month.getMonth()}
           date={date}
           testID={`${SELECT_DATE_SLOT}-${date.dateString}`}
           accessibilityLabel={this.getAccessibilityLabel(day)}

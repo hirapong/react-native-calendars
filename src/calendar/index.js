@@ -88,7 +88,7 @@ class Calendar extends Component {
 
     this.shouldComponentUpdate = shouldComponentUpdate;
   }
-  
+
   addMonth = count => {
     this.updateMonth(this.state.currentMonth.clone().addMonths(count, true));
   };
@@ -225,6 +225,7 @@ class Calendar extends Component {
         <Day
           {...dayProps}
           day={day}
+          month={this.state.currentMonth}
           state={this.getState(day)}
           marking={this.getDateMarking(day)}
           onPress={this.pressDay}
