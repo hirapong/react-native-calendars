@@ -150,7 +150,7 @@ class CalendarHeader extends Component {
   };
 
   renderArrow(direction) {
-    const {hideArrows, disableArrowLeft, disableArrowRight, renderArrow, testID} = this.props;
+    const {hideArrows, disableArrowLeft, disableArrowRight, renderArrow, testID, month} = this.props;
     if (hideArrows) {
       return <View />;
     }
@@ -171,7 +171,7 @@ class CalendarHeader extends Component {
         testID={testId}
       >
         {renderArrow ? (
-          renderArrow(renderArrowDirection)
+          renderArrow(renderArrowDirection, month)
         ) : (
           <Image source={imageSource} style={shouldDisable ? this.style.disabledArrowImage : this.style.arrowImage} />
         )}
