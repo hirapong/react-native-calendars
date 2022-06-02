@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, ActivityIndicator} from 'react-native';
 import {extractComponentProps} from '../component-updater';
 import Calendar from '../calendar';
 import styleConstructor from './style';
@@ -97,8 +97,14 @@ class CalendarListItem extends Component {
 
       return (
         <View style={[{height: calendarHeight, width: calendarWidth}, this.style.placeholder]}>
-          <Text allowFontScaling={false} style={this.style.placeholderText}>
-            {text}
+          <ActivityIndicator size="large" color="#B2B2B2" />
+          <Text style={{
+            margin: 8,
+            fontSize: 14,
+            lineHeight: 21,
+            color: '#B2B2B2',
+          }}>
+            {"読み込み中"}
           </Text>
         </View>
       );
